@@ -7,3 +7,5 @@ var object2 = SingletonObject.GetInstance();
 Console.WriteLine($"Data of object 2: {object2.Data}");
 
 Console.WriteLine($"Are object equal? {object.Equals(object1, object2)}");
+
+Console.ReadKey();
