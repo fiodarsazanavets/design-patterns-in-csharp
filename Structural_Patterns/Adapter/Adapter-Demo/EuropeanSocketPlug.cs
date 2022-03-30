@@ -13,7 +13,7 @@ internal class EuropeanSocketPlug : ISocketPlug
     {
         if (socket is not IEuropeanElectricSocket)
         {
-            throw new ArgumentException("The European plug can only be connected to an European socket.");
+            throw new ArgumentException("The European plug can only be connected to a European socket.");
         }
 
         europeanSocket = (IEuropeanElectricSocket)socket;

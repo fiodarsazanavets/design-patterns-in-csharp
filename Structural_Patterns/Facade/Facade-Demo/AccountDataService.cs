@@ -2,7 +2,7 @@
 
 internal class AccountDataService
 {
-    private List<Account> accounts;
+    private readonly List<Account> accounts;
 
     public AccountDataService()
     {

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chain-of-Responsibility-Demo", "Chain-of-Responsibility-Demo\Chain-of-Responsibility-Demo.csproj", "{C6510AF3-FEF7-45C4-BE41-A339C5C172DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6510AF3-FEF7-45C4-BE41-A339C5C172DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6510AF3-FEF7-45C4-BE41-A339C5C172DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6510AF3-FEF7-45C4-BE41-A339C5C172DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6510AF3-FEF7-45C4-BE41-A339C5C172DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37D3A166-8571-460F-BA7A-D564B1193B75}
+	EndGlobalSection
+EndGlobal
