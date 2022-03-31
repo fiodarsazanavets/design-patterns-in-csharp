@@ -1,6 +1,6 @@
 ﻿namespace Iterator_Demo;
 
-public class ListAggregate : IAggregate
+internal class ListAggregate : IAggregate
 {
 	private List<int> collection;
 

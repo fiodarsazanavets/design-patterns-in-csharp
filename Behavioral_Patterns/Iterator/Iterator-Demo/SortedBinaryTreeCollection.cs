@@ -1,6 +1,6 @@
 ﻿namespace Iterator_Demo;
 
-public class SortedBinaryTreeCollection : IAggregate
+internal class SortedBinaryTreeCollection : IAggregate
 {
     private Node root;
     private Node current;

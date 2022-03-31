@@ -1,6 +1,6 @@
 ﻿namespace Iterator_Demo;
 
-public class SortedBinaryTreeIterator : IIterator
+internal class SortedBinaryTreeIterator : IIterator
 {
 	private SortedBinaryTreeCollection aggregate;
 

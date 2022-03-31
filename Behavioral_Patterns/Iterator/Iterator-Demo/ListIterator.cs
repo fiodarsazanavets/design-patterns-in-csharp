@@ -1,6 +1,6 @@
 ﻿namespace Iterator_Demo;
 
-public class ListIterator : IIterator
+internal class ListIterator : IIterator
 {
 	private ListAggregate aggregate;
 	private int currentIndex;

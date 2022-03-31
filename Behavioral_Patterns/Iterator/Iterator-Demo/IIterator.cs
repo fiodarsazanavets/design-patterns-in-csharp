@@ -1,6 +1,6 @@
 ﻿namespace Iterator_Demo;
 
-public interface IIterator
+internal interface IIterator
 {
     bool MoveNext();
     int GetCurrent();

@@ -1,6 +1,6 @@
 ﻿namespace Iterator_Demo;
 
-public interface IAggregate
+internal interface IAggregate
 {
 	IIterator CreateIterator();
 	void Insert(int value);
