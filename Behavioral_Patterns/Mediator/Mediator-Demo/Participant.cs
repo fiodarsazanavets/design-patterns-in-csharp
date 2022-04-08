@@ -1,7 +1,7 @@
 ﻿
 namespace Mediator_Demo;
 
-internal class Participant : IParticipant
+internal abstract class Participant : IParticipant
 {
     private IMediator mediator;
 
