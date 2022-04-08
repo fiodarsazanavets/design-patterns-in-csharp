@@ -11,7 +11,7 @@ internal class AuthenticationHandler : RequestHandler
         if (successor is not null)
             return successor.HandleRequest(request);
 
-        return new Response(true, "Authentication successfu.l");
+        return new Response(true, "Authentication successful.");
     }
 }
 
