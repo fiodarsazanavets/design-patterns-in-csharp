@@ -7,7 +7,7 @@ internal class DataCommandInvoker
     public void SetCommand(ICommand command)
     {
         this.command = command;
-        Console.WriteLine($"Comamnd {command.GetType()} set.");
+        Console.WriteLine($"Command {command.GetType()} set.");
     }
 
     public void ExecuteCommand()
