@@ -2,8 +2,8 @@
 
 internal class TextEditorMemento :  IMemento
 {
-	private string state;
-	private DateTimeOffset created;
+	private readonly string state;
+	private readonly DateTimeOffset created;
 
 	public TextEditorMemento(string state)
 	{
