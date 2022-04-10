@@ -2,7 +2,7 @@
 
 internal class SortedBinaryTreeIterator : IIterator
 {
-	private SortedBinaryTreeCollection aggregate;
+	private readonly SortedBinaryTreeCollection aggregate;
     private Node? current;
 
 	public SortedBinaryTreeIterator(SortedBinaryTreeCollection aggregate)
