@@ -2,13 +2,11 @@
 
 internal class SortedBinaryTreeCollection : IAggregate
 {
-    private Node root;
-    private Node current;
+    private Node? root;
 
     public SortedBinaryTreeCollection()
     {
         root = null;
-        current = null;
     }
 
     public IIterator CreateIterator()
@@ -16,56 +14,21 @@ internal class SortedBinaryTreeCollection : IAggregate
         return new SortedBinaryTreeIterator(this);
     }
 
-    public bool MoveNext()
+    public Node GetFirst()
     {
-        if (current is null)
-        {
-            GetFirst();
-            return true;
-        }
+        var current = root;
 
-        if (current.Right is not null)
+        while (true)
         {
-            current = current.Right;
-
-            while (true)
+            if (current?.Left is not null)
             {
-                if (current.Left is null)
-                {
-                    break;
-                }
-
                 current = current.Left;
             }
-
-            return true;
-        }
-        else
-        {
-            var originalValue = current.Value;
-
-            while (true)
+            else
             {
-                if (current.Parent is not null)
-                {
-                    current = current.Parent;
-
-                    if (current.Value > originalValue)
-                    {
-                        return true;
-                    }
-                }
-                else
-                {
-                    return false;
-                }              
+                return current;
             }
         }
-    }
-
-    public int GetCurrent()
-    {
-        return current.Value;
     }
 
     public void Insert(int value)
@@ -107,23 +70,6 @@ internal class SortedBinaryTreeCollection : IAggregate
                         return;
                     }
                 }
-            }
-        }
-    }
-
-    private void GetFirst()
-    {
-        current = root;
-
-        while (true)
-        {
-            if (current.Left is not null)
-            {
-                current = current.Left;
-            }
-            else
-            {
-                return;
             }
         }
     }
