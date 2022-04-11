@@ -1,6 +1,6 @@
 ﻿namespace Prototype_Demo;
 
-internal class ClonableObject : IClonable
+internal class CloneableObject : ICloneable
 {
     private readonly int internalData;
     private readonly string internalTitle;
@@ -16,7 +16,7 @@ internal class ClonableObject : IClonable
     public int Data => internalData;
     public string Title => internalTitle;
 
-    public IClonable Clone()
+    public ICloneable Clone()
     {
         return (ClonableObject)MemberwiseClone();
     }
