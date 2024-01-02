@@ -22,7 +22,7 @@ internal class ProductsFacade
                         .FirstOrDefault();
 
         if (accountId == default)
-            return new List<Product>();
+            return [];
 
         var accountCategory = accountCategoryService.GetCategory(accountId);
 

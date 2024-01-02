@@ -1,16 +1,8 @@
 ﻿namespace Iterator_Demo;
 
-internal class SortedBinaryTreeIterator : IIterator
+internal class SortedBinaryTreeIterator(SortedBinaryTreeCollection aggregate) : IIterator
 {
-	private readonly SortedBinaryTreeCollection aggregate;
-    private Node? current;
-
-	public SortedBinaryTreeIterator(SortedBinaryTreeCollection aggregate)
-	{
-		this.aggregate = aggregate;
-        current = null;
-
-    }
+	private Node? current = null;
 
     public bool MoveNext()
     {
@@ -61,6 +53,6 @@ internal class SortedBinaryTreeIterator : IIterator
 
     public int GetCurrent()
     {
-        return current.Value;
+        return current?.Value ?? 0;
     }
 }

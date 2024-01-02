@@ -14,4 +14,3 @@ internal class AuthenticationHandler : RequestHandler
         return new Response(true, "Authentication successful.");
     }
 }
-

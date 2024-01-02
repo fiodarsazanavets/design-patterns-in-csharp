@@ -8,13 +8,13 @@ internal class UnlockedScreenState : IMobilePhoneState
 
     public UnlockedScreenState()
     {
-        appNames = new List<string>()
-        {
+        appNames =
+        [
             "Notes",
             "Solitaire",
             "Calendar",
             "Contacts"
-        };
+        ];
 
         currentApp = null;
     }

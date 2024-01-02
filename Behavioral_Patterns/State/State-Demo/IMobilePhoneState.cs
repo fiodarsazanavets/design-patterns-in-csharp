@@ -1,6 +1,4 @@
-﻿using System.Dynamic;
-
-namespace State_Demo;
+﻿namespace State_Demo;
 
 internal interface IMobilePhoneState
 {

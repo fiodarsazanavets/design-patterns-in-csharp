@@ -1,13 +1,7 @@
 ﻿namespace Chain_of_Responsibility_Demo;
 
-internal class Response
+internal class Response(bool success, string message)
 {
-    public Response(bool success, string message)
-    {
-        Success = success;
-        Message = message;
-    }
-
-    public bool Success { get; }
-    public string? Message { get; }
+    public bool Success { get; } = success;
+    public string? Message { get; } = message;
 }

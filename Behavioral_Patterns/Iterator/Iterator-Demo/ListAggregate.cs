@@ -2,11 +2,11 @@
 
 internal class ListAggregate : IAggregate
 {
-	private List<int> collection;
+	private readonly List<int> collection;
 
 	public ListAggregate()
     {
-        collection = new List<int>();
+        collection = [];
     }
 
     public IIterator CreateIterator()

@@ -3,11 +3,11 @@ using System.Text.RegularExpressions;
 
 namespace Template_Method_Demo;
 
-internal abstract class AbstractTextToHtmlConverter
+internal abstract partial class AbstractTextToHtmlConverter
 {
-	protected string ProcessParagraphs(string text)
+	protected static string ProcessParagraphs(string text)
     {
-        var paragraphs = Regex.Split(text, @"(\r\n?|\n)")
+        var paragraphs = MyRegex().Split(text)
                           .Where(p => p.Any(char.IsLetterOrDigit));
 
         var sb = new StringBuilder();
@@ -32,4 +32,7 @@ internal abstract class AbstractTextToHtmlConverter
         text = ProcessParagraphs(text);
         return ApplyPostProcessing(text);
     }
+
+    [GeneratedRegex(@"(\r\n?|\n)")]
+    private static partial Regex MyRegex();
 }

@@ -13,4 +13,3 @@ internal class AuthorizationHandler : RequestHandler
         return new Response(true, "Authorization successful.");
     }
 }
-

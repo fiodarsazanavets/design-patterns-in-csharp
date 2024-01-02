@@ -2,7 +2,6 @@
 
 var phone = new MobilePhoneContext();
 
-
 phone.PressHomeButton();
 var apps = phone.GetAppNames();
 

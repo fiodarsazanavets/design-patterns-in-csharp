@@ -1,22 +1,14 @@
 ﻿namespace Flyweight_Demo;
 
-internal class SoldierFlyweight
+internal class SoldierFlyweight(string soldierType,
+    int experienceLevel,
+    int speed,
+    int strength)
 {
-    public SoldierFlyweight(string soldierType,
-        int experienceLevel,
-        int speed,
-        int strength)
-    {
-        SoldierType = soldierType;
-        ExperienceLevel = experienceLevel;
-        Speed = speed;
-        Strength = strength;
-    }
-
-    public string SoldierType { get; set; }
-    public int ExperienceLevel { get; set; }
-    public int Speed { get; set; }
-    public int Strength { get; set; }
+    public string SoldierType { get; set; } = soldierType;
+    public int ExperienceLevel { get; set; } = experienceLevel;
+    public int Speed { get; set; } = speed;
+    public int Strength { get; set; } = strength;
 
     public void Eliminate(int soldierId)
     {

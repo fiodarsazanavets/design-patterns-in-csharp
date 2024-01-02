@@ -6,11 +6,13 @@ internal class AccountDataService
 
     public AccountDataService()
     {
-        accounts = new();
-        accounts.Add(new Account(1, "John Smith"));
-        accounts.Add(new Account(2, "Jane Doe"));
-        accounts.Add(new Account(3, "Laurence Newport"));
-        accounts.Add(new Account(4, "David Fisher"));
+        accounts =
+        [
+            new Account(1, "John Smith"),
+            new Account(2, "Jane Doe"),
+            new Account(3, "Laurence Newport"),
+            new Account(4, "David Fisher"),
+        ];
     }
 
     public List<Account> GetAccounts()

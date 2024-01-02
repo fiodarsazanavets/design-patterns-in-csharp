@@ -5,7 +5,7 @@ namespace Factory_Method_Demo;
 
 internal class WindowsPlayer : Player
 {
-    [DllImport("winmm.dll")]
+    [DllImport("winmm.dll", CharSet = CharSet.Unicode)]
     private static extern int mciSendString(string command, StringBuilder stringReturn, int returnLength, IntPtr hwndCallback);
 
     public override Task Play(string fileName)

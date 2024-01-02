@@ -14,7 +14,7 @@ internal class SortedBinaryTreeCollection : IAggregate
         return new SortedBinaryTreeIterator(this);
     }
 
-    public Node GetFirst()
+    public Node? GetFirst()
     {
         var current = root;
 
@@ -33,7 +33,7 @@ internal class SortedBinaryTreeCollection : IAggregate
 
     public void Insert(int value)
     {
-        Node newNode = new Node(value);
+        Node newNode = new(value);
 
         if (root is null)
         {

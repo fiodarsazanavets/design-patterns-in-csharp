@@ -35,7 +35,7 @@ internal class MdConverterVisitor : IVisitor
             .Replace("</del>", "~~");
     }
 
-    private int CountStringOccurrences(string text, string pattern)
+    private static int CountStringOccurrences(string text, string pattern)
     {
         int count = 0;
         int currentIndex = 0;
@@ -47,7 +47,7 @@ internal class MdConverterVisitor : IVisitor
         return count;
     }
 
-    private string ApplyTagReplacement(string text, string inputTag, string outputOpeningTag, string outputClosingTag)
+    private static string ApplyTagReplacement(string text, string inputTag, string outputOpeningTag, string outputClosingTag)
     {
         int count = 0;
         int currentIndex = 0;

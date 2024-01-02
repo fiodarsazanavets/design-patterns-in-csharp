@@ -5,7 +5,7 @@ internal class LockedScreenState : IMobilePhoneState
     public List<string> GetAppNames()
     {
         Console.WriteLine("Cannot get apps in a locked state.");
-        return new List<string>();
+        return [];
     }
 
     public string? GetCurrentApp()
