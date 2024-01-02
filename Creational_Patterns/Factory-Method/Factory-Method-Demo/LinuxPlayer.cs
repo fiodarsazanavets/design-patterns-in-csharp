@@ -6,7 +6,11 @@ internal class LinuxPlayer : Player
 {
     public override Task Play(string fileName)
     {
-        StartBashProcess($"mpg123 -q '{fileName}'");
+        Console.WriteLine("Playing audio via the following command:");
+        Console.WriteLine($"mpg123 -q '{fileName}'");
+
+        // Uncomment for testing on a real device
+        // StartBashProcess($"mpg123 -q '{fileName}'");
 
         return Task.CompletedTask;
     }

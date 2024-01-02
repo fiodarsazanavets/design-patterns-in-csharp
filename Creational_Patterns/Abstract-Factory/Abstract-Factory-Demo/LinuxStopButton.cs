@@ -10,6 +10,10 @@ internal class LinuxStopButton : StopButton
             LinuxPlayerUtility.PlaybackProcess.Dispose();
             LinuxPlayerUtility.PlaybackProcess = null;
         }
+        else
+        {
+            Console.WriteLine("No active playback process found.");
+        }
 
         return Task.CompletedTask;
     }

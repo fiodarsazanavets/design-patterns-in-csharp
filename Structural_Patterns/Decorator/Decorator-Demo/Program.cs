@@ -1,28 +1,28 @@
 ﻿using Decorator_Demo;
 
-var gun = new Gun();
+var powerDrill = new PowerDrill();
 
-gun.Reload();
-gun.Shoot();
-gun.Shoot();
+powerDrill.Recharge();
+powerDrill.Drill();
+powerDrill.Drill();
 
-Console.WriteLine("Applying a silencer.");
-var silencer = new Silencer();
-silencer.SetGun(gun);
-silencer.Shoot();
-silencer.Shoot();
+Console.WriteLine("Adding a hammer extension.");
+var silencer = new HammerExtension();
+silencer.SetPowerDrill(powerDrill);
+silencer.Drill();
+silencer.Drill();
 
-Console.WriteLine("Applying an extended magazine.");
-var extendedMag = new ExtendedMagazine();
-extendedMag.SetGun(silencer);
-extendedMag.Reload();
-extendedMag.Shoot();
-extendedMag.Shoot();
-extendedMag.Shoot();
-extendedMag.Shoot();
-extendedMag.Shoot();
-extendedMag.Shoot();
-extendedMag.Shoot();
-extendedMag.Shoot();
+Console.WriteLine("Adding an extended battery.");
+var extendedMag = new ExtendedBattery();
+extendedMag.SetPowerDrill(silencer);
+extendedMag.Recharge();
+extendedMag.Drill();
+extendedMag.Drill();
+extendedMag.Drill();
+extendedMag.Drill();
+extendedMag.Drill();
+extendedMag.Drill();
+extendedMag.Drill();
+extendedMag.Drill();
 
 Console.ReadKey();
