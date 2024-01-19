@@ -5,7 +5,7 @@ internal class CloneableObject : ICloneable
     private readonly int internalData;
     private readonly string internalTitle;
 
-    public ClonableObject(string title)
+    public CloneableObject(string title)
     {
         var random = new Random();
         internalData = random.Next();
@@ -18,6 +18,6 @@ internal class CloneableObject : ICloneable
 
     public ICloneable Clone()
     {
-        return (ClonableObject)MemberwiseClone();
+        return (CloneableObject)MemberwiseClone();
     }
 }

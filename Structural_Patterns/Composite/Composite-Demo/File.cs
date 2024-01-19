@@ -1,13 +1,8 @@
 ﻿namespace Composite_Demo;
 
-internal class File : IComponent
+internal class File(string name) : IComponent
 {
-    public File(string name)
-    {
-        Name = name;
-    }
-
-    public string Name { get; }
+    public string Name { get; } = name;
 
     public void Display(string currentPath)
     {

@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Visitor_Demo;
 
-internal class TextToHtmlConverter : IComponent
+internal partial class TextToHtmlConverter : IComponent
 {
     public string Accept(IVisitor visitor, string text)
     {
@@ -12,7 +12,7 @@ internal class TextToHtmlConverter : IComponent
 
     public string ProcessParagraphs(string text)
     {
-        var paragraphs = Regex.Split(text, @"(\r\n?|\n)")
+        var paragraphs = MyRegex().Split(text)
                           .Where(p => p.Any(char.IsLetterOrDigit));
 
         var sb = new StringBuilder();
@@ -29,4 +29,7 @@ internal class TextToHtmlConverter : IComponent
 
         return sb.ToString();
     }
+
+    [GeneratedRegex(@"(\r\n?|\n)")]
+    private static partial Regex MyRegex();
 }

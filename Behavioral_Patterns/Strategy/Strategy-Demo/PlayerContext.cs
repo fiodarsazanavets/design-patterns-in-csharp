@@ -2,7 +2,7 @@
 
 internal class PlayerContext
 {
-	private IPlayerStrategy strategy;
+	private IPlayerStrategy? strategy;
 
 	public void SetStrategy(IPlayerStrategy strategy)
     {
@@ -11,7 +11,9 @@ internal class PlayerContext
 
 	public Task Play(string fileName)
     {
-		return strategy.Play(fileName);
+		if (strategy is null)
+			throw new ArgumentNullException(nameof(strategy));
 
+		return strategy.Play(fileName);
 	}
 }

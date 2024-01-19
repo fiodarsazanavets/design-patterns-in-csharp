@@ -1,17 +1,9 @@
 ﻿
 namespace Mediator_Demo;
 
-internal abstract class Participant : IParticipant
+internal abstract class Participant(string key, IMediator mediator) : IParticipant
 {
-    private IMediator mediator;
-
-    protected string key;
-
-    public Participant(string key, IMediator mediator)
-    {
-        this.key = key;
-        this.mediator = mediator;
-    }
+    protected string key = key;
 
     public virtual void SendCommand(string receiver, string command)
     {

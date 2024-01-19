@@ -2,8 +2,8 @@
 
 internal class UpsertCommand : Command
 {
-    private string key;
-    private string value;
+    private readonly string key;
+    private readonly string value;
 
     public UpsertCommand(string key,
         string value,

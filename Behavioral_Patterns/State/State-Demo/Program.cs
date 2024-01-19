@@ -2,13 +2,25 @@
 
 var phone = new MobilePhoneContext();
 
-Console.WriteLine("Pressing home button.");
 phone.PressHomeButton();
+var apps = phone.GetAppNames();
+
+foreach (var app in apps)
+{
+    phone.SelectApp(app);
+    phone.GetCurrentApp();
+}
 
 Console.WriteLine("Changing the phone state to unlocked.");
 phone.ChangeState(new UnlockedScreenState());
 
-Console.WriteLine("Pressing home button.");
 phone.PressHomeButton();
+apps = phone.GetAppNames();
+
+foreach (var app in apps)
+{
+    phone.SelectApp(app);
+    phone.GetCurrentApp();
+}
 
 Console.ReadKey();

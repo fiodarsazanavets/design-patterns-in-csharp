@@ -6,7 +6,7 @@ internal class NetworkMediator : IMediator
 
 	public NetworkMediator()
 	{
-		participants = new Dictionary<string, IParticipant>();
+		participants = [];
 	}
 
 	public void Register(string key, IParticipant participant)

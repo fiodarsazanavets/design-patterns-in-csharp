@@ -6,7 +6,7 @@ public class DataService : IDataService
 
     public DataService()
     {
-        data = new();
+        data = [];
     }
 
     public List<string> GetData()

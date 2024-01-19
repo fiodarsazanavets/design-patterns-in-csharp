@@ -1,17 +1,10 @@
 ﻿namespace Iterator_Demo;
 
-internal class ListIterator : IIterator
+internal class ListIterator(ListAggregate aggregate) : IIterator
 {
-	private ListAggregate aggregate;
-	private int currentIndex;
+	private int currentIndex = -1;
 
-	public ListIterator(ListAggregate aggregate)
-	{
-		this.aggregate = aggregate;
-		currentIndex = -1;
-	}
-
-	public bool MoveNext()
+    public bool MoveNext()
 	{
 		if (currentIndex + 1 < aggregate.Count)
 		{

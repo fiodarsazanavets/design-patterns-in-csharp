@@ -1,16 +1,10 @@
 ﻿namespace Composite_Demo;
 
-internal class Folder : IComponent
+internal class Folder(string name) : IComponent
 {
-    private readonly List<IComponent> children;
+    private readonly List<IComponent> children = [];
 
-    public Folder(string name)
-    {
-        Name = name;
-        children = new();
-    }
-
-    public string Name { get; }
+    public string Name { get; } = name;
 
     public void Display(string currentPath)
     {

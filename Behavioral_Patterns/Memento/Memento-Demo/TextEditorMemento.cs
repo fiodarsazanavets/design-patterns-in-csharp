@@ -1,17 +1,11 @@
 ﻿namespace Memento_Demo;
 
-internal class TextEditorMemento :  IMemento
+internal class TextEditorMemento(string state) :  IMemento
 {
-	private readonly string state;
-	private readonly DateTimeOffset created;
+	private readonly string state = state;
+	private readonly DateTimeOffset created = DateTimeOffset.Now;
 
-	public TextEditorMemento(string state)
-	{
-		this.state = state;
-		created = DateTimeOffset.Now;
-	}
-
-	public string GetState()
+    public string GetState()
     {
 		return state;
     }

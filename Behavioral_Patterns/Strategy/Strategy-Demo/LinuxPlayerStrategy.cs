@@ -11,7 +11,7 @@ public class LinuxPlayerStrategy : IPlayerStrategy
         return Task.CompletedTask;
     }
 
-    private void StartBashProcess(string command)
+    private static void StartBashProcess(string command)
     {
         var escapedArgs = command.Replace("\"", "\\\"");
 

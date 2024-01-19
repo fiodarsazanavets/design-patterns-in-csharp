@@ -6,7 +6,7 @@ internal class DataService : IDataService
 
     public DataService()
     {
-        data = new();
+        data = [];
     }
 
     public async Task<List<string>> GetData()
